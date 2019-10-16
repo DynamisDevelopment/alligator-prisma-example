@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "graphql-cli": "^3.0.14",
+    "prisma-binding": "2.1.1",
+    "graphql-yoga": "^1.16.7"
+  },
+  "name": "graphql-prisma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "get-schema": "graphql get-schema -p prisma",
+    "start": "nodemon --ext js,graphql src/index-dist.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
