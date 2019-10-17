@@ -1,3 +1,10 @@
+type Query {
+  users: [User!]!
+}
+
+# type Mutation {}
+# type Subscription {}
+
 type User {
   id: ID! 
   name: String!
