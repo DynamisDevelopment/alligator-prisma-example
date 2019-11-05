@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "1.7.0",
     "graphql-cli": "^3.0.14",
     "prisma-binding": "2.1.1",
     "graphql-yoga": "^1.16.7"
@@ -11,7 +14,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "get-schema": "graphql get-schema -p prisma",
-    "start": "nodemon --ext js,graphql src/index-dist.js"
+    "start": "nodemon src/index.js --ext js,graphql --exec babel-node"
   },
   "author": "",
   "license": "ISC",
