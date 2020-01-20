@@ -1,11 +1,40 @@
+#? Resolvers
 type Query {
-  users: [User!]!
+  posts: [Post!]!
 }
 
-# type Mutation {}
-# type Subscription {}
+type Mutation {
+  addPost(data: CreatePostInput): Post!
+  updatePost(id: ID!, data: CreatePostInput): Post!
+  deletePost(id: String!): Post!
+}
 
-type User {
+type Subscription {
+  post(id: ID!): UserSubscriptionPayload!
+}
+
+
+#? Types 
+type Post {
   id: ID! 
-  name: String!
+  title: String! 
+  body: String
+}
+
+
+#? Misc
+input CreatePostInput {
+  title: String! 
+  body: String!
+}
+
+enum MutationType {
+  CREATED
+  UPDATED 
+  DELETED
+}
+
+type UserSubscriptionPayload {
+  mutation: MutationType!
+  node: Post
 }

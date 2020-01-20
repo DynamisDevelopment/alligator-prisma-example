@@ -1,4 +1,5 @@
-type User {
+type Post {
   id: ID! @id
-  name: String!
+  title: String! 
+  body: String!
 }

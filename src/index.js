@@ -6,8 +6,8 @@ const server = new GraphQLServer({
     typeDefs: './schema.graphql',
     resolvers: {
         Query,
-        // Mutation,
-        // Subscription
+        Mutation,
+        Subscription
     },
     context: { prisma }
 })
